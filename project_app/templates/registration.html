@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>Bib-maker registration</title>
+    <meta charset="utf-8">
+    <link href="/styles/style_new.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cantata+One">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="scripts/registration.js"></script>
+</head>
+
+<body>
+    <div id="topnav">
+        <nav class="navbar navbar-expand-sm bg-success navbar-light navbar-static-top">
+            <ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href=" {{ url_for('index') }}">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href=" {{ url_for('login') }}">Login</a></li>
+				<li class="nav-item"><a class="nav-link" href=" {{ url_for('registration') }}">Sign Up</a></li>
+				<li class="nav-item"><a class="nav-link" href=" {{ url_for('publications') }}">Publications</a> </li>
+            </ul>
+        </nav>
+    </div>
+    <main class="d-flex justify-content-center">
+        <section class="col-lg-6 col-md-8 col-12">
+            <form id="registration-form" class="registration-form" autocomplete="off" action={{url_for("register")}}
+                method="post" enctype="multipart/form-data">
+                <h2>Stwórz konto</h2>
+                <div id="firstname_l" class="row justify-content-center">
+                    <label for="firstname" class="required col-5">Imię</label>
+                    <input class="col-7 form-control" id="firstname" type="text" name="firstname"
+                        placeholder="First Name" />
+                </div>
+                <div id="lastname_l" class="row justify-content-center mt-2">
+                    <label for="lastname" class="required col-5">Nazwisko</label>
+                    <input class="col-7 form-control" id="lastname" type="text" name="lastname"
+                        placeholder="Last Name" />
+                </div>
+                <div id="login_l" class="row justify-content-center mt-2">
+                    <label for="login" class="required col-5">Login</label>
+                    <input class="col-7 form-control" id="login" type="text" name="login" placeholder="Login" />
+                </div>
+                <div id="password_l" class="row justify-content-center mt-2">
+                    <label for="password" class="required col-5">Hasło</label>
+                    <input class="col-7 form-control" id="password" type="password" name="password"
+                        placeholder="Password" />
+                </div>
+                <div id="repeat-password_l" class="row justify-content-center mt-2">
+                    <label for="repeat-password" class="required col-5">Powtórz hasło</label>
+                    <input class="col-7 form-control" id="repeat-password" type="password" name="repeat-password"
+                        placeholder="Repeat Password" />
+                </div>
+                <div class="row justify-content-center mt-3">
+                    <input class="btn btn-success col-sm-8 form-control" id="button-reg-form " type="submit"
+                        value="Rejestruj" />
+                </div>
+
+            </form>
+
+        </section>
+    </main>
+    <footer>
+        <p class="footer-inline">&copy; 2020 Piotr Rosa proudly powered by <img src="favicon.ico"
+                alt="footer icon" title="pr" class="footer-img" /></p>
+    </footer>
+</body>
+
+</html>

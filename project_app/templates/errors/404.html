@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>Redis & Session</title>
+    <meta charset="utf-8">
+    <link href="/styles/style.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Cambay&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <section>
+        <header>
+            <h1>404</h1>
+        </header>
+        <p>
+            Dojechałeś do ślepej uliczki.
+            <br />
+            Nie wiemy gdzie jesteś.
+            <br />
+            Nie możemy wysłać wsparcia.
+            <a href="{{ url_for('my_publications') }}"> Zawróć.</a>
+        </p>
+        <p>
+            <strong>Więcej o błędzie:</strong>
+            <br />
+            {{error}}
+        </p>
+    </section>
+</body>
+
+</html>

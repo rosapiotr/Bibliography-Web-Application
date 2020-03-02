@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<title>Bib-maker Home</title>
+	<meta charset="utf-8">
+	<link href="/styles/style_new.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cantata+One">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<div id="topnav">
+		<nav class="navbar navbar-expand-sm bg-success navbar-light navbar-static-top">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href=" {{ url_for('index') }}">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href=" {{ url_for('login') }}">Login</a></li>
+				<li class="nav-item"><a class="nav-link" href=" {{ url_for('registration') }}">Sign Up</a></li>
+				<li class="nav-item"><a class="nav-link" href=" {{ url_for('publications') }}">Publications</a> </li>
+				<li class="nav-item"><a class="nav-link" href=" {{ url_for('logout') }}">Logout</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="container">
+		<header>
+			<h1>Zarządzanie bibliografią</h1>
+		</header>
+		<main>
+			<section>
+				<h3>Wprowadzenie</h3>
+				<p>
+					Zarządzanie referencjami przez wielu badaczy jest postrzegane jako żmudne i czasochłonne, zwłaszcza
+					gdy
+					odbywa się to ręcznie. W przeszłości odniesienia były zapisywane na kartach indeksowych i
+					przechowywane
+					w skrzyniach. Oprogramowanie do zarządzania referencjami pozwala na cyfryzację osobistej kolekcji
+					odpowiednich publikacji naukowych.
+					Najwcześniejsze programy do zarządzania przechowywaniem bibliografii istnieją od ponad 25 lat,
+					jednak
+					każdy wpis musiał być wpisywany ręcznie.
+					W ciągu ostatnich 15 lat widzieliśmy szereg istotnych usprawnieć, które uczyniły zarządzanie
+					bibliografią łatwiejszym, m.in. wyszukiwanie informacji referencyjnych z internetowych baz
+					bibliograficznych, czy Internetowe zarządzanie referencjami dla łatwiejszej współpracy i korzystania
+					z
+					wielu urządzeń.
+				</p>
+			</section>
+		</main>
+	</div>
+	<div class="container">
+		<article>
+			<h3>Czym jest system do zarządzania bibliografią?</h3>
+			<p>
+				System ten pomaga badaczom w realizacji trzech podstawowych etapów badań: wyszukiwania, przechowywania
+				oraz
+				pisania. Pomaga badaczom znaleźć odpowiednią literaturę, pozwala im przechowywać dokumenty
+				bibliograficzne
+				w osobistej bazie danych w celu późniejszego ich wyszukiwania, a także pozwala badaczom na wstawianie
+				cytatów i odniesienia w wybranym stylu podczas pisania tekstu. System do zarządzania bibliograbią to
+				pakiet
+				oprogramowania, który umożliwia autorom naukowym zbieranie, organizowanie i wykorzystywanie odniesień
+				bibliograficznych lub cytatów.
+			</p>
+		</article>
+		<article>
+			<h3>Wprowadzanie referencji do systemu</h3>
+			<p>
+				Wszystkie systemy do zarządzania bibliografią zapewniają funkcję ręcznego wprowadzania danych
+				bibliograficznych. Wygodniej jest jednak, jeśli odniesienia są automatycznie pobierane z internetowej
+				bazy
+				bibliograficznej, takiej jak Web of Science lub Scopus. Większość takich programów może również
+				importować
+				referencje bezpośrednio ze strony internetowej, zwykle przy użyciu informacji osadzonych przez CoinS.
+				Wszyscy menedżerowie referencji mogą importować i eksportować referencje w formacie BibTeX i/lub RIS.
+				Jest
+				to wygodny sposób na udostępnianie list referencyjnych współpracownikom.
+			</p>
+		</article>
+		<article>
+			<h3>Opłaty</h3>
+			<p>
+				Niektóre z największych bibliograficznych baz danych (Web of Science, Scopus) są dostępne w ramach
+				płatnych
+				subskrypcji. Na szczęście w ciągu ostatnich 10 lat byliśmy świadkami pojawienia się coraz większej
+				liczby
+				ogólnodostępnych baz danych bibliograficznych. Trend ten rozpoczął się w PubMed pod koniec lat 90-tych,
+				obejmuje Google Scholar, a ostatnio Microsoft Academic Search i CrossRef Metadata Search, a obecnie
+				obejmuje
+				również bazy bibliograficzne budowane przez same systemy bibliograficzne (np. Mendeley lub CiteULike).
+			</p>
+	</div>
+	<div class="container">
+		<div class="table-responsive">
+			<table class="table">
+				<caption>Porównanie programów</caption>
+				<thead class="thead-light">
+					<tr>
+						<th scope="col">No.</th>
+						<th scope="col">Program</th>
+						<th scope="col">Dostawca</th>
+						<th scope="col">Data wydania</th>
+						<th scope="col">Aktualna wersja</th>
+						<th scope="col">Koszt</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1.</td>
+						<td>Biblioscape</td>
+						<td>CG Information</td>
+						<td>1997</td>
+						<td>10.0.3.6</td>
+						<td>$79-299</td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>BibSonomy</td>
+						<td>University of Kassel</td>
+						<td>2006-01</td>
+						<td>3.8.13</td>
+						<td>Darmowy</td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>CiteULike</td>
+						<td>Oversity Limited</td>
+						<td>2004-11</td>
+						<td>Shut Down</td>
+						<td>Darmowy</td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>Mendeley</td>
+						<td>Elsevier</td>
+						<td>2008-08</td>
+						<td>1.19</td>
+						<td>Darmowy</td>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td>EndNote</td>
+						<td>Clarivate Analytics</td>
+						<td>1988</td>
+						<td>X9</td>
+						<td>$299.95</td>
+					</tr>
+					<tr>
+						<td>6.</td>
+						<td>Wikindx</td>
+						<td>Mark Grimshaw</td>
+						<td>2004-02</td>
+						<td>5.8.2</td>
+						<td>Darmowy</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+		<img class="img-fluid" src="image.jpg" alt="image" id="image">
+		</article>
+	</div>
+
+	<footer>
+		<p class="footer-inline">&copy; 2020 Piotr Rosa proudly powered by <img src="favicon.ico"
+				alt="footer icon" title="pr" class="footer-img" /></p>
+	</footer>
+</html>

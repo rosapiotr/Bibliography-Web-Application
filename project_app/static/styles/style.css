@@ -1,0 +1,148 @@
+body {
+	max-width:1024px;
+	margin-left:300px;
+	margin-right:300px;
+	padding-bottom: 50px;
+	font-family: 'Cambay', sans-sefir !important;
+}
+
+header {
+    color: #0c0c9c;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+    color: olive;
+}
+
+nav ul li a:hover {
+    background-color: #ebda9e;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	background-color: beige;
+	max-width: inherit;
+	width: 100%;
+	height: 46px;
+	font-family: 'Anonymous Pro', sans-serif;
+	font-size: 15px;
+}
+
+.footer-inline {
+    display: inline-block;
+    width: 48%;
+    padding-left: 1%;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.footer-img {
+    vertical-align: middle;
+}
+
+section h3 {
+	color:darkblue;
+
+}
+
+article h3 {
+	color:darkred;
+}
+
+article p {
+	color: red;
+}
+
+section p,
+article p {
+	text-indent: 25px;
+}
+
+section p {
+	color: blue;
+}
+
+table {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+table, th, td {
+	border: 1px solid beige;
+}
+
+.caption-bottom {
+	caption-side: bottom;
+}
+
+td:nth-child(1) {
+	text-align: right;
+}
+
+tr:nth-child(odd) {
+	background-color: #fbda9e;
+}
+
+tr:nth-child(even) {
+	background-color: #f5c843;
+}
+
+thead tr {
+        background-color: #f5c843 !important;
+}
+
+.registration-form {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.registration-form label {
+    float: left;
+    width: 150px;
+    text-align: right;
+}
+
+.registration-form label::after {
+    content: ":";
+}
+
+.registration-form input {
+    float: left;
+    width: 150px;
+}
+
+#button-reg-form {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
+
+label.required::after {
+    color: red;
+    content: "*:";
+}

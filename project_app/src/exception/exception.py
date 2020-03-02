@@ -1,0 +1,2 @@
+class PublicationAlreadyExistsException(Exception):
+    pass

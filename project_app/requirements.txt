@@ -1,0 +1,6 @@
+flask
+flask_restplus
+flask_cors
+requests
+redis
+werkzeug==0.16.1

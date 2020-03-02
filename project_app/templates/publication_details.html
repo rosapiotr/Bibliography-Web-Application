@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>Publication uploader</title>
+    <meta charset="utf-8">
+    <link href="../styles/style_new.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cantata+One">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <script src="../scripts/publications_details.js" defer></script>
+</head>
+
+<body>
+    <div id="topnav">
+        <nav class="navbar navbar-expand-sm bg-success navbar-light navbar-static-top">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('my_publications') }}">My Publications</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('my_files') }}">My Files</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('add_file') }}">Add File</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="container mt-4">
+        <header>
+            <h2>Szczegóły publikacji</h2>
+        </header>
+        <div class="container" id="szczegoly_publikacji">
+            <h4> ID: {{ data["publication"]["id"] }} </h4>
+            <h4> Tytuł: {{ data["publication"]["title"] }} </h4>
+            <h4> Autor: {{ data["publication"]["author"] }} </h4>
+            <h4> Rok: {{ data["publication"]["year"] }} </h4>
+            <h4> Pliki: </h4>
+            <ul>
+                {% for file in data["publication"]["files"] %}
+                <li> ({{ file["file_id"] }}) <a href={{file["file_url"]}}>{{file["filename"]}}</a></li>
+                {% endfor %}
+            </ul>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <p class=flashes>
+                {{ messages[0] }}
+            </p>
+            {% endif %}
+            {% endwith %}
+            <header>
+            <h2>Podepnij/Odepnij plik</h2> 
+        </header>
+            <form class="row" action={{url_for("attachfile", pub_ID=data["publication"]["id"])}}
+                method="post" enctype="multipart/form-data">
+                <label for="file_ID" class="required col-3 mt-3">ID pliku</label>
+                <input class="col-2 form-control mt-2" id="file_ID" type="text" name="file_ID" id="file_ID"
+                    placeholder="ID" required>
+
+                <input class="col-4 mt-2 btn btn-success" id="button-attach" type="submit" value="Podepnij/Odepnij">
+
+            </form>
+            <div class="text-center">
+                <button class="col-4 mt-2 btn btn-danger" onclick="deletePublication()">Usuń publikacje</button>
+            </div>
+            {% if previous_url %}
+            <p><a href={{previous_url}}>Poprzednia</a></p>
+            {% endif %}
+
+            {% if next_url %}
+            <p><a href={{next_url}}>Następna</a></p>
+            {% endif %}
+        </div>
+    </section>
+    <footer>
+        <p class="footer-inline">&copy; 2020 Piotr Rosa proudly powered by <img src="../favicon.ico" alt="footer icon"
+                title="pr" class="footer-img" /></p>
+    </footer>
+</body>
+
+</html>

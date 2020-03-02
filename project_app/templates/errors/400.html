@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>Redis & Session</title>
+    <meta charset="utf-8">
+    <link href="/styles/style.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Cambay&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <section>
+        <header>
+            <h1>400</h1>
+        </header>
+        <p>
+            OJEJ!
+            <br />
+            Nie wiemy, jak się tutaj dostałeś.
+            <br />
+            Jeśli wprowadziłeś adres ręcznie, sprawdź jego poprawność lub przejdź do strony głównej:
+            <a href="{{ url_for('publications') }}"> Zawróć.</a>
+        </p>
+        <p>
+            <strong>Więcej o błędzie:</strong>
+            <br />
+            {{error}}
+        </p>
+    </section>
+</body>
+
+</html>

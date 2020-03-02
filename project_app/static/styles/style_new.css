@@ -1,0 +1,96 @@
+body {
+    padding-bottom: 30px;
+    font-family: 'Cantata One', sefir-sans !important;
+}
+
+#topnav .navbar-nav {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#topnav .navbar-nav li > a {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#topnav .navbar-nav li > a:hover {
+    transition: background-color .2s, color .2s;
+    background-color: rgb(131, 124, 22);
+    color: rgb(32, 20, 139);
+}
+
+.registration-form {
+    box-sizing: border-box;
+    padding:25px 50px;
+    background:#f4e6e9;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+}
+
+.registration-form h2 {
+    text-align: center;
+}
+
+label.required::after {
+    color: red;
+    content: "*:";
+}
+
+label {
+    text-align: right;
+}
+
+header {
+    color: #0c0c9c;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+.flashes {
+    color:red;
+    font-size:medium;
+    text-align:center;
+    padding-left:10%;
+}
+
+.error_class {
+    border:2px solid red !important;
+}
+
+.error_message {
+    width: 100%;
+    padding: 0 0;
+    text-indent: 10%;
+    margin: 0 0 0 0;
+    font-size: x-small;
+    text-align: center;
+    color: red;
+}
+
+
+
+
+
+footer {
+	position: fixed;
+	bottom: 0;
+    background-color: beige;
+	width: 100%;
+	height: 30px;
+	font-family: 'Cantata One', serif-sans;
+    font-size: 15px;
+}
+
+footer p {
+    margin: 5px 5px 5px 5px;
+}
+
+.footer-inline {
+    display: inline-block;
+    padding-left: 1%;
+}
+
+.footer-img {
+    vertical-align: middle;
+}
